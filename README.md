@@ -6,7 +6,7 @@ An interactive and visually engaging music player built with HTML, CSS, and Java
 Dynamic Animations: Floating musical notes to enhance the visual appeal.
 User-Friendly Controls: Intuitive playback, volume, and playlist management.
 Responsive Design: Works seamlessly across devices, from desktops to mobile.
-📸 Preview
+
 
 🚀 Getting Started
 
