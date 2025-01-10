@@ -26,6 +26,9 @@ Responsive Design: Works seamlessly across devices, from desktops to mobile.
         CSS3: Styling and animations.
         JavaScript: Adding interactivity and handling audio.
 
+🎵 Music Credits:
+        The music tracks used in this project are sourced from the Free Music Archive (FMA) and can be downloaded from https://files.freemusicarchive.org/.
+
 💡 Feedback & Contributions:
       Feedback is always welcome! If you have ideas for improvement or find any issues, feel free to open an issue or submit a pull request.
 
