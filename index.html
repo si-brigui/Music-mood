@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Left Section: Text and Playlist -->
+      <div id="left-section">
+        <div id="player">
+          <h1>Tune Into the Moment</h1>
+          <p id="artist-name">Artist Name</p>
+          <input type="range" id="progress-bar" value="0" />
+          <div id="time-and-volume">
+            <div id="time-info">
+              <span id="current-time">0:00</span> /
+              <span id="duration">0:00</span>
+            </div>
+            <input
+              type="range"
+              id="volume-control"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </div>
+          <div id="controls">
+            <button id="prev">⏮️</button>
+            <button id="play-pause">▶️</button>
+            <button id="next">⏭️</button>
+          </div>
+          <div id="playlist">
+            <ul>
+              <li data-track="audio/Kirk Osamayo - Happy.mp3">
+                Kirk Osamayo - Happy
+              </li>
+              <li data-track="audio/Geb - Emotions Are Alright With Me.mp3">
+                Geb - Emotions Are Alright With Me
+              </li>
+              <li data-track="audio/done with fish - Chertovski.mp3">
+                done with fish - Chertovski
+              </li>
+              <li data-track="audio/Brylie Christopher Oxley - Media Detox.mp3">
+                Brylie Christopher Oxley - Media Detox
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section: Image -->
+      <div id="right-section">
+        <img src="OIP.jpg" alt="Music Notes" id="background-image" />
+      </div>
+    </div>
+
+    <!-- Add a floating notes overlay -->
+    <div id="background-overlay">
+      <div class="note">🎵</div>
+      <div class="note">Do</div>
+      <div class="note">🎶</div>
+      <div class="note">Re</div>
+      <div class="note">🎵</div>
+      <div class="note">Mi</div>
+    </div>
+
+    <!-- Add JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

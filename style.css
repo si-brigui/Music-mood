@@ -1,0 +1,218 @@
+/* General body styling with background image */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: url("background.webp") repeat,
+    linear-gradient(135deg, #1e1e1e, #121212);
+  backdrop-filter: blur(10px);
+  background-size: contain, cover;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated floating music notes */
+#background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.note {
+  position: absolute;
+  bottom: -100px;
+  font-size: 2.5em;
+  color: rgba(255, 255, 255, 0.7);
+  animation: floatUp 6s linear infinite;
+}
+
+.note:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.note:nth-child(2) {
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.note:nth-child(3) {
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.note:nth-child(4) {
+  left: 70%;
+  animation-delay: 3s;
+}
+
+.note:nth-child(5) {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+/* Animation for floating notes */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50vh) scale(1.2);
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Style adjustments for other sections (unchanged from your original CSS) */
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  max-width: 1400px;
+  background-color: #44c0df;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#left-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Other styles remain the same */
+
+#player h1 {
+  font-size: 3.2em;
+  text-align: center;
+}
+
+#artist-name {
+  font-size: 2em;
+  color: #020d11;
+}
+
+#progress-bar {
+  width: 100%;
+  margin: 20px 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #0d0101;
+  appearance: none;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+#time-and-volume {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#time-info {
+  font-size: 1.5em;
+  color: #020d11;
+}
+
+#volume-control {
+  width: 200px;
+  margin-left: 20px;
+  appearance: none;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+#volume-control::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#controls button {
+  background-color: #1170be;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 2em;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+#controls button:hover {
+  background-color: #1170be;
+}
+
+#playlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#playlist li {
+  padding: 15px;
+  background-color: #1170be;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 1.8em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#playlist li:hover {
+  background-color: #8cc5d9;
+  transform: scale(1.02);
+}
+
+#playlist .playing {
+  background-color: #06528b;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#right-section {
+  padding-left: 20px;
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#background-image {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
